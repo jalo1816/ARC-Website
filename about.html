@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Arasu Rubber Corporation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7f6;
+      color: #222;
+    }
+
+    header {
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo h1 {
+      color: #0f6b35;
+      font-size: 28px;
+    }
+
+    .logo p {
+      color: gray;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 25px;
+      color: #333;
+      font-weight: 500;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #0f6b35;
+    }
+
+    .hero {
+      height: 45vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 55px;
+    }
+
+    .about-section {
+      padding: 80px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-section img {
+      width: 100%;
+      border-radius: 25px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, .15);
+    }
+
+    .about-content h3 {
+      font-size: 40px;
+      color: #0f6b35;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      line-height: 2;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .mission-section {
+      padding: 0 60px 80px;
+    }
+
+    .mission-box {
+      background: white;
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    .mission-box h3 {
+      color: #0f6b35;
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .mission-grid {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #eef8f0;
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    .card h4 {
+      color: #0f6b35;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #0a3f20;
+      color: white;
+      padding: 50px 60px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    footer h4 {
+      font-size: 24px;
+    }
+
+    footer p,
+    footer li {
+      margin-top: 15px;
+      color: #d6e8d8;
+      line-height: 1.8;
+      list-style: none;
+    }
+
+    @media(max-width:900px) {
+
+      .about-section {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      <h1>ARASU RUBBER CORPORATION</h1>
+      <p>Government of Tamil Nadu</p>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="organisation.html">Organisation</a>
+      <a href="labour.html">Labour</a>
+      <a href="we-sell.html">We sell</a>
+      <a href="tenders.html">Tenders</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>About Us</h2>
+    </div>
+  </section>
+
+  <section class="about-section">
+
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop">
+
+    <div class="about-content">
+
+      <h3>Who We Are</h3>
+
+      <p>
+        Arasu Rubber Corporation Limited is a Government of Tamil Nadu enterprise dedicated to the development of
+        natural rubber plantations and sustainable agricultural growth.
+      </p>
+
+      <p>
+        The corporation focuses on plantation management, worker welfare, environmental sustainability, and transparent
+        public service systems across Tamil Nadu.
+      </p>
+
+      <p>
+        With decades of experience, the corporation continues to modernize operations and improve productivity while
+        supporting rural employment and eco-friendly initiatives.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="mission-section">
+
+    <div class="mission-box">
+
+      <h3>Our Mission & Vision</h3>
+
+      <div class="mission-grid">
+
+        <div class="card">
+          <h4>🌿 Sustainability</h4>
+
+          <p>
+            Promote eco-friendly plantation development and preserve natural resources for future generations.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>👨‍🌾 Worker Welfare</h4>
+
+          <p>
+            Ensure safe working environments and improve the quality of life for plantation workers.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>📈 Growth & Innovation</h4>
+
+          <p>
+            Adopt modern technologies and efficient systems to strengthen rubber production and services.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>ARASU RUBBER CORPORATION</h4>
+
+        <p>
+          A Government of Tamil Nadu enterprise focused on sustainable plantation and public service excellence.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li>About Us</li>
+          <li>Tenders</li>
+          <li>Statistics</li>
+          <li>Gallery</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <p>
+          Arasu Rubber Corporation Limited<br>
+          Tamil Nadu, India<br>
+          support@arasu-rubber.gov.in
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

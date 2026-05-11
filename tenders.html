@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tenders - Arasu Rubber Corporation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f7f6;
+      color: #222;
+    }
+
+    header {
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo h1 {
+      color: #0f6b35;
+      font-size: 28px;
+    }
+
+    .logo p {
+      color: gray;
+      font-size: 14px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 25px;
+      color: #333;
+      font-weight: 500;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #0f6b35;
+    }
+
+    .hero {
+      height: 40vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 55px;
+    }
+
+    .tender-section {
+      padding: 80px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 {
+      font-size: 42px;
+      color: #0f6b35;
+    }
+
+    .tender-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .tender-card {
+      background: white;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+      transition: .3s;
+    }
+
+    .tender-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #0f6b35;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .tender-card h4 {
+      color: #0f6b35;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .tender-card p {
+      color: #666;
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+
+    .details {
+      margin-bottom: 20px;
+    }
+
+    .details div {
+      margin-bottom: 10px;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #0f6b35;
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .download-btn:hover {
+      background: #0a4f27;
+    }
+
+    .notice-section {
+      padding: 0 60px 80px;
+    }
+
+    .notice-box {
+      background: white;
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    .notice-box h3 {
+      color: #0f6b35;
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .notice-box p {
+      color: #555;
+      line-height: 2;
+    }
+
+    footer {
+      background: #0a3f20;
+      color: white;
+      padding: 50px 60px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    footer h4 {
+      font-size: 24px;
+    }
+
+    footer p,
+    footer li {
+      margin-top: 15px;
+      color: #d6e8d8;
+      line-height: 1.8;
+      list-style: none;
+    }
+
+    @media(max-width:900px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .tender-section,
+      .notice-section {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="logo">
+      <h1>ARASU RUBBER CORPORATION</h1>
+      <p>Government of Tamil Nadu</p>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="organisation.html">Organisation</a>
+      <a href="labour.html">Labour</a>
+      <a href="tenders.html">Tenders</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </header>
+
+  <section class="hero">
+
+    <div>
+      <h2>Tenders</h2>
+    </div>
+
+  </section>
+
+  <section class="tender-section">
+
+    <div class="section-title">
+      <h3>Latest Tender Notifications</h3>
+    </div>
+
+    <div class="tender-grid">
+
+      <div class="tender-card">
+
+        <span class="badge">NEW</span>
+
+        <h4>Supply of Rubber Sheets</h4>
+
+        <p>
+          Tender invitation for the supply and transportation of processed rubber sheets to various divisions.
+        </p>
+
+        <div class="details">
+          <div><strong>Tender ID:</strong> ARC2026-001</div>
+          <div><strong>Closing Date:</strong> 25 May 2026</div>
+          <div><strong>Division:</strong> Chithar</div>
+        </div>
+
+        <a href="#" class="download-btn">Download PDF</a>
+
+      </div>
+
+      <div class="tender-card">
+
+        <span class="badge">LIVE</span>
+
+        <h4>Estate Maintenance Work</h4>
+
+        <p>
+          Tender for estate road maintenance, drainage cleaning, and plantation infrastructure improvements.
+        </p>
+
+        <div class="details">
+          <div><strong>Tender ID:</strong> ARC2026-002</div>
+          <div><strong>Closing Date:</strong> 31 May 2026</div>
+          <div><strong>Division:</strong> Keeriparai</div>
+        </div>
+
+        <a href="#" class="download-btn">Download PDF</a>
+
+      </div>
+
+      <div class="tender-card">
+
+        <span class="badge">OPEN</span>
+
+        <h4>Worker Safety Equipment</h4>
+
+        <p>
+          Procurement of gloves, helmets, uniforms, and safety kits for plantation workers.
+        </p>
+
+        <div class="details">
+          <div><strong>Tender ID:</strong> ARC2026-003</div>
+          <div><strong>Closing Date:</strong> 05 June 2026</div>
+          <div><strong>Division:</strong> Maramalai</div>
+        </div>
+
+        <a href="#" class="download-btn">Download PDF</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="notice-section">
+
+    <div class="notice-box">
+
+      <h3>Important Notice</h3>
+
+      <p>
+        All tender applications must be submitted before the specified closing date and time. Applicants are advised to
+        carefully read all tender conditions and eligibility requirements before submission.
+      </p>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>ARASU RUBBER CORPORATION</h4>
+
+        <p>
+          A Government of Tamil Nadu enterprise focused on sustainable plantation and public service excellence.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li>About Us</li>
+          <li>Tenders</li>
+          <li>Statistics</li>
+          <li>Gallery</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <p>
+          Arasu Rubber Corporation Limited<br>
+          Tamil Nadu, India<br>
+          support@arasu-rubber.gov.in
+        </p>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

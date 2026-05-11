@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Sell - Arasu Rubber Corporation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f8f2;
+            color: #222;
+        }
+
+        /* HEADER */
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-section img {
+            width: 85px;
+            height: 85px;
+            border-radius: 10px;
+        }
+
+        .title h1 {
+            color: #0b7a32;
+            font-size: 40px;
+        }
+
+        .title p {
+            color: #8cc63f;
+            font-size: 20px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .contact-btn {
+            background: #8cc63f;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #0b7a32;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #8cc63f;
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #083b18;
+        }
+
+        /* HERO */
+
+        .hero {
+            height: 350px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 85%;
+            margin: 70px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 45px;
+            color: #0b7a32;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* MIND MAP */
+
+        .mindmap {
+            position: relative;
+            width: 100%;
+            min-height: 700px;
+            margin-top: 40px;
+        }
+
+        .center-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #0b7a32;
+            color: white;
+            padding: 30px 50px;
+            border-radius: 18px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .node {
+            position: absolute;
+            width: 240px;
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: 0.3s;
+            border-top: 6px solid #8cc63f;
+        }
+
+        .node:hover {
+            transform: scale(1.05);
+        }
+
+        .node h3 {
+            color: #0b7a32;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .node p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* NODE POSITIONS */
+
+        .node1 {
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .node2 {
+            top: 180px;
+            left: 50px;
+        }
+
+        .node3 {
+            top: 180px;
+            right: 50px;
+        }
+
+        .node4 {
+            bottom: 180px;
+            left: 50px;
+        }
+
+        .node5 {
+            bottom: 180px;
+            right: 50px;
+        }
+
+        .node6 {
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* LINES */
+
+        .line {
+            position: absolute;
+            background: #8cc63f;
+        }
+
+        .line1 {
+            width: 4px;
+            height: 90px;
+            top: 140px;
+            left: 50%;
+        }
+
+        .line2 {
+            width: 220px;
+            height: 4px;
+            top: 320px;
+            left: 250px;
+        }
+
+        .line3 {
+            width: 220px;
+            height: 4px;
+            top: 320px;
+            right: 250px;
+        }
+
+        .line4 {
+            width: 220px;
+            height: 4px;
+            bottom: 320px;
+            left: 250px;
+        }
+
+        .line5 {
+            width: 220px;
+            height: 4px;
+            bottom: 320px;
+            right: 250px;
+        }
+
+        .line6 {
+            width: 4px;
+            height: 90px;
+            bottom: 140px;
+            left: 50%;
+        }
+
+        /* INFO BOX */
+
+        .info-box {
+            margin-top: 80px;
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-box h2 {
+            color: #0b7a32;
+            margin-bottom: 25px;
+            font-size: 38px;
+        }
+
+        .info-box ul {
+            margin-left: 25px;
+        }
+
+        .info-box li {
+            margin-bottom: 18px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            margin-top: 70px;
+            background: linear-gradient(135deg, #0b7a32, #8cc63f);
+            padding: 60px;
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .contact-section a {
+            background: white;
+            color: #0b7a32;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 80px;
+            background: #0b7a32;
+            color: white;
+            padding: 30px 8%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:1100px) {
+
+            .mindmap {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+                align-items: center;
+                min-height: auto;
+            }
+
+            .center-box,
+            .node {
+                position: static;
+                transform: none;
+                width: 90%;
+            }
+
+            .line {
+                display: none;
+            }
+
+            .hero h2 {
+                font-size: 42px;
+            }
+
+            .title h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-header">
+
+            <div class="logo-section">
+
+                <img src="logo.png">
+
+                <div class="title">
+                    <h1>ARASU RUBBER CORPORATION LIMITED</h1>
+                    <p>AN ISO 9001-2015 CERTIFIED</p>
+                </div>
+
+            </div>
+
+            <a href="contact.html" class="contact-btn">Contact Us</a>
+
+        </div>
+
+    </header>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="organisation.html">Organisation</a>
+        <a href="labour.html">Labour</a>
+        <a href="we-sell.html">We Sell</a>
+        <a href="tenders.html">Tenders</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div>
+
+            <h2>Natural Rubber Products</h2>
+
+            <p>
+                Premium quality rubber products supplied by Arasu Rubber Corporation
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENT -->
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>We Sell</h2>
+
+            <p>
+                The Corporation supplies high-quality natural rubber products
+                through efficient production and market analysis.
+            </p>
+
+        </div>
+
+        <!-- MIND MAP -->
+
+        <div class="mindmap">
+
+            <div class="center-box">
+                Natural Rubber
+            </div>
+
+            <div class="node node1">
+                <h3>Latex 60%</h3>
+                <p>
+                    Concentrated latex produced as per I.S.I specifications.
+                </p>
+            </div>
+
+            <div class="node node2">
+                <h3>Skim Crepe</h3>
+                <p>
+                    High-quality skim crepe processed under controlled conditions.
+                </p>
+            </div>
+
+            <div class="node node3">
+                <h3>RSS Sheets</h3>
+                <p>
+                    Ribbed smoked sheets available in multiple industrial grades.
+                </p>
+            </div>
+
+            <div class="node node4">
+                <h3>Brown Crepe</h3>
+                <p>
+                    Estate Brown Crepe available in SIX, 1X, 2X and 3X grades.
+                </p>
+            </div>
+
+            <div class="node node5">
+                <h3>Special Cenex</h3>
+                <p>
+                    Special quality cenex products like low VFA and double centrifuge.
+                </p>
+            </div>
+
+            <div class="node node6">
+                <h3>Rubber Trees</h3>
+                <p>
+                    Matured rubber trees and seeds are also sold on contract basis.
+                </p>
+            </div>
+
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+            <div class="line line6"></div>
+
+        </div>
+
+        <!-- INFO -->
+
+        <div class="info-box">
+
+            <h2>Additional Information</h2>
+
+            <ul>
+
+                <li>Materials are sold on “FIRST COME FIRST SERVED” basis.</li>
+
+                <li>Rubber seed collection is permitted on contract basis.</li>
+
+                <li>Matured rubber trees are available for sale.</li>
+
+                <li>Separate tenders are floated for canteens and petty shops in field areas.</li>
+
+                <li>All products maintain industrial quality standards.</li>
+
+            </ul>
+
+        </div>
+
+        <!-- CONTACT -->
+
+        <div class="contact-section">
+
+            <h2>Need Rubber Products?</h2>
+
+            <p>
+                Contact Arasu Rubber Corporation for industrial orders and product enquiries.
+            </p>
+
+            <a href="contact.html">Contact Now</a>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Arasu Rubber Corporation Limited. All Rights Reserved.
+        </p>
+
+        <p>
+            Last Updated : 07-05-2026
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Statistics - Arasu Rubber Corporation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f7f5;
+    }
+
+    /* HEADER */
+
+    .top-header {
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-section img {
+      width: 90px;
+    }
+
+    .logo-text h1 {
+      color: #0f6b35;
+      font-size: 38px;
+    }
+
+    .logo-text p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    .contact-btn {
+      background: #8dc63f;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* NAVBAR */
+
+    .navbar {
+      background: #8dc63f;
+      padding: 18px 60px;
+      display: flex;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .navbar a:hover {
+      color: #0f6b35;
+    }
+
+    /* HERO */
+
+    .hero {
+      height: 45vh;
+
+      background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #e5e5e5;
+    }
+
+    /* STATISTICS */
+
+    .stats-section {
+      padding: 80px 60px;
+    }
+
+    .stats-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .stats-title h2 {
+      font-size: 50px;
+      color: #0f6b35;
+    }
+
+    .stats-title p {
+      margin-top: 15px;
+      color: #666;
+      font-size: 18px;
+    }
+
+    .stats-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+      transition: .3s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .stat-card h3 {
+      font-size: 45px;
+      color: #0f6b35;
+      margin-bottom: 15px;
+    }
+
+    .stat-card p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    /* TABLE */
+
+    .table-container {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead {
+      background: #0f6b35;
+      color: white;
+    }
+
+    thead th {
+      padding: 22px;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    tbody td {
+      padding: 20px;
+      border-bottom: 1px solid #e5e5e5;
+      color: #444;
+    }
+
+    tbody tr:hover {
+      background: #f6fff8;
+    }
+
+    .highlight {
+      background: #dff2d8;
+      font-weight: 700;
+    }
+
+    .total {
+      background: #8dc63f;
+      color: white;
+      font-weight: 700;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #0a3f20;
+      color: white;
+      padding: 50px 60px;
+      margin-top: 60px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    footer h4 {
+      font-size: 24px;
+    }
+
+    footer p,
+    footer li {
+      margin-top: 15px;
+      color: #d6e8d8;
+      line-height: 1.8;
+      list-style: none;
+    }
+
+    .bottom-bar {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+      text-align: center;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1000px) {
+
+      .top-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .stats-section {
+        padding: 40px 20px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <div class="top-header">
+
+    <div class="logo-section">
+
+
+      <div class="logo-text">
+
+        <h1>ARASU RUBBER CORPORATION</h1>
+
+        <p>AN ISO 9001-2015 CERTIFIED</p>
+
+      </div>
+
+    </div>
+
+    <a href="contact.html" class="contact-btn">
+      Contact Us
+    </a>
+
+  </div>
+
+  <!-- NAVBAR -->
+
+  <div class="navbar">
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="organisation.html">Organisation</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="labour.html">Labour</a>
+    <a href="we-sell.html">We sell</a>
+    <a href="tenders.html">Tenders</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div>
+
+      <h2>Rubber Statistics</h2>
+
+      <p>
+        Plantation Area Statistics Across India
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- STATISTICS -->
+
+  <section class="stats-section">
+
+    <div class="stats-title">
+
+      <h2>Rubber Plantation Data</h2>
+
+      <p>
+        Statistical overview of rubber cultivation across traditional and non-traditional regions in India.
+      </p>
+
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="stats-cards">
+
+      <div class="stat-card">
+        <h3>615200</h3>
+        <p>Total Area (Ha)</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>84.85%</h3>
+        <p>Traditional Region</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>10.47%</h3>
+        <p>North Eastern States</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>4.69%</h3>
+        <p>Other States</p>
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>State / Territory</th>
+            <th>Total Area (Ha)</th>
+            <th>% Share</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr class="highlight">
+            <td>1. Traditional Region</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Kerala</td>
+            <td>502740</td>
+            <td>81.71</td>
+          </tr>
+
+          <tr>
+            <td>Tamil Nadu</td>
+            <td>19233</td>
+            <td>3.13</td>
+          </tr>
+
+          <tr class="highlight">
+            <td>Sub Total</td>
+            <td>521973</td>
+            <td>84.85</td>
+          </tr>
+
+          <tr class="highlight">
+            <td>2. Non Traditional Region</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Tripura</td>
+            <td>37846</td>
+            <td>6.15</td>
+          </tr>
+
+          <tr>
+            <td>Assam</td>
+            <td>15890</td>
+            <td>2.58</td>
+          </tr>
+
+          <tr>
+            <td>Meghalaya</td>
+            <td>5331</td>
+            <td>0.87</td>
+          </tr>
+
+          <tr>
+            <td>Nagaland</td>
+            <td>2486</td>
+            <td>0.40</td>
+          </tr>
+
+          <tr>
+            <td>Manipur</td>
+            <td>1859</td>
+            <td>0.30</td>
+          </tr>
+
+          <tr>
+            <td>Mizoram</td>
+            <td>525</td>
+            <td>0.09</td>
+          </tr>
+
+          <tr>
+            <td>Arunachal Pradesh</td>
+            <td>446</td>
+            <td>0.07</td>
+          </tr>
+
+          <tr class="highlight">
+            <td>Sub Total</td>
+            <td>64383</td>
+            <td>10.47</td>
+          </tr>
+
+          <tr>
+            <td>Karnataka</td>
+            <td>26035</td>
+            <td>4.23</td>
+          </tr>
+
+          <tr>
+            <td>Andaman & Nicobar Islands</td>
+            <td>729</td>
+            <td>0.12</td>
+          </tr>
+
+          <tr>
+            <td>Goa</td>
+            <td>772</td>
+            <td>0.13</td>
+          </tr>
+
+          <tr>
+            <td>Maharashtra</td>
+            <td>171</td>
+            <td>0.03</td>
+          </tr>
+
+          <tr>
+            <td>Orissa</td>
+            <td>500</td>
+            <td>0.08</td>
+          </tr>
+
+          <tr>
+            <td>West Bengal</td>
+            <td>526</td>
+            <td>0.09</td>
+          </tr>
+
+          <tr>
+            <td>Andhra Pradesh</td>
+            <td>111</td>
+            <td>0.02</td>
+          </tr>
+
+          <tr class="highlight">
+            <td>Sub Total</td>
+            <td>28844</td>
+            <td>4.69</td>
+          </tr>
+
+          <tr class="total">
+            <td>Grand Total (India)</td>
+            <td>615200</td>
+            <td>100</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h4>ARASU RUBBER CORPORATION</h4>
+
+        <p>
+          Government enterprise focused on sustainable rubber plantation development and public service excellence.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li>Organisation</li>
+          <li>Statistics</li>
+          <li>Tenders</li>
+          <li>Gallery</li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4>Contact</h4>
+
+        <p>
+          Arasu Rubber Corporation Limited<br>
+          Tamil Nadu, India
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="bottom-bar">
+      Copyright © 2026 Arasu Rubber Corporation Limited
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

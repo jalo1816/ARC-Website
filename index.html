@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arasu Rubber Corporation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:#f5f7f6;
+            color:#222;
+        }
+
+        /* HEADER */
+
+        header{
+            background:white;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .logo h1{
+            color:#0f6b35;
+            font-size:28px;
+        }
+
+        .logo p{
+            color:gray;
+            font-size:14px;
+        }
+
+        nav a{
+            text-decoration:none;
+            margin-left:25px;
+            color:#333;
+            font-weight:500;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#0f6b35;
+        }
+
+        /* HERO */
+
+        .hero{
+            height:85vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            align-items:center;
+            padding:60px;
+            color:white;
+        }
+
+        .hero-content{
+            max-width:700px;
+        }
+
+        .hero h2{
+            font-size:55px;
+            line-height:1.2;
+        }
+
+        .hero p{
+            margin-top:20px;
+            font-size:18px;
+            line-height:1.8;
+            color:#e0e0e0;
+        }
+
+        .hero-buttons{
+            margin-top:30px;
+        }
+
+        .hero-buttons button{
+            padding:14px 28px;
+            border:none;
+            border-radius:12px;
+            margin-right:15px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+            font-weight:600;
+        }
+
+        .primary-btn{
+            background:#0f6b35;
+            color:white;
+        }
+
+        .primary-btn:hover{
+            background:#0a4f27;
+        }
+
+        .secondary-btn{
+            background:white;
+            color:#0f6b35;
+        }
+
+        /* TODAY RATE SECTION */
+
+        .today-rate-section{
+            padding:20px 60px 0;
+        }
+
+        .rate-card{
+            background:linear-gradient(135deg,#0f6b35,#8cc63f);
+            border-radius:25px;
+            padding:45px 50px;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:30px;
+            flex-wrap:wrap;
+
+            color:white;
+
+            box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+            position:relative;
+            overflow:hidden;
+        }
+
+        .rate-card::before{
+            content:'';
+            position:absolute;
+            width:250px;
+            height:250px;
+            background:rgba(255,255,255,0.08);
+            border-radius:50%;
+            top:-80px;
+            right:-80px;
+        }
+
+        .rate-left{
+            position:relative;
+            z-index:2;
+        }
+
+        .rate-left h3{
+            font-size:38px;
+            margin-bottom:12px;
+        }
+
+        .rate-left p{
+            font-size:18px;
+            line-height:1.8;
+            max-width:500px;
+        }
+
+        .rate-right{
+            text-align:right;
+            position:relative;
+            z-index:2;
+        }
+
+        .rate-right h2{
+            font-size:65px;
+            font-weight:bold;
+            margin-bottom:15px;
+        }
+
+        .rate-right h2 span{
+            font-size:28px;
+            margin-left:5px;
+        }
+
+        .update-box{
+            background:white;
+            color:#0f6b35;
+            padding:12px 20px;
+            border-radius:12px;
+            font-size:16px;
+            font-weight:bold;
+            display:inline-block;
+        }
+
+        /* STATS */
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:25px;
+            padding:70px 60px;
+        }
+
+        .stat-card{
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            box-shadow:0 4px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .stat-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .stat-card h3{
+            font-size:40px;
+            color:#0f6b35;
+        }
+
+        .stat-card p{
+            margin-top:10px;
+            color:gray;
+            font-weight:500;
+        }
+
+        /* CONTENT */
+
+        .content-section{
+            display:grid;
+            grid-template-columns:2fr 1fr;
+            gap:30px;
+            padding:0 60px 80px;
+        }
+
+        .about-box,
+        .news-box{
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .about-box img{
+            width:100%;
+            height:320px;
+            object-fit:cover;
+        }
+
+        .about-content{
+            padding:35px;
+        }
+
+        .about-content h3{
+            color:#0f6b35;
+            font-size:34px;
+        }
+
+        .about-content p{
+            margin-top:20px;
+            line-height:1.9;
+            color:#555;
+        }
+
+        .about-content button{
+            margin-top:25px;
+            padding:12px 22px;
+            border:none;
+            border-radius:10px;
+            background:#0f6b35;
+            color:white;
+            font-weight:600;
+            cursor:pointer;
+        }
+
+        /* NEWS */
+
+        .news-box{
+            padding:25px;
+            background:#eef8f0;
+        }
+
+        .news-box h3{
+            color:#0f6b35;
+            font-size:28px;
+            margin-bottom:20px;
+        }
+
+        .news-card{
+            background:white;
+            padding:18px;
+            border-radius:15px;
+            margin-bottom:18px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .news-card p{
+            color:#444;
+            font-weight:500;
+        }
+
+        .news-card small{
+            display:block;
+            margin-top:10px;
+            color:gray;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#0a3f20;
+            color:white;
+            padding:50px 60px;
+            margin-top:40px;
+        }
+
+        .footer-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:40px;
+        }
+
+        footer h4{
+            font-size:24px;
+        }
+
+        footer p,
+        footer li{
+            margin-top:15px;
+            color:#d6e8d8;
+            line-height:1.8;
+            list-style:none;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:900px){
+
+            .content-section{
+                grid-template-columns:1fr;
+            }
+
+            .hero h2{
+                font-size:38px;
+            }
+
+            header{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            .today-rate-section{
+                padding:20px;
+            }
+
+            .rate-card{
+                padding:35px 25px;
+                text-align:center;
+                justify-content:center;
+            }
+
+            .rate-left h3{
+                font-size:30px;
+            }
+
+            .rate-right{
+                text-align:center;
+            }
+
+            .rate-right h2{
+                font-size:50px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <h1>ARASU RUBBER CORPORATION</h1>
+
+            <p>Government of Tamil Nadu</p>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="organisation.html">Organisation</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="labour.html">Labour</a>
+            <a href="we-sell.html">We Sell</a>
+            <a href="tenders.html">Tenders</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h2>Sustainable Rubber Development for Tamil Nadu</h2>
+
+            <p>
+                Modern plantation management, public transparency,
+                and efficient government services.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn">Explore Services</button>
+
+                <button class="secondary-btn">View Tenders</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TODAY RATE SECTION -->
+
+    <section class="today-rate-section">
+
+        <div class="rate-card">
+
+            <div class="rate-left">
+
+                <h3>Today's Rubber Rate</h3>
+
+                <p>
+                    Latest market rate updated by Arasu Rubber Corporation
+                </p>
+
+            </div>
+
+            <div class="rate-right">
+
+                <h2>₹185<span>/Kg</span></h2>
+
+                <div class="update-box">
+
+                    Last Updated : 08-05-2026
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <h3>12+</h3>
+
+            <p>Estates</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>2500+</h3>
+
+            <p>Employees</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>640K T</h3>
+
+            <p>Production</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>50+</h3>
+
+            <p>Years Experience</p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTENT -->
+
+    <section class="content-section">
+
+        <div class="about-box">
+
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop"
+                alt="Plantation">
+
+            <div class="about-content">
+
+                <h3>Welcome to Arasu Rubber Corporation</h3>
+
+                <p>
+                    Arasu Rubber Corporation Limited plays a major role in
+                    natural rubber production and plantation development
+                    in Tamil Nadu. The corporation focuses on sustainability,
+                    worker welfare, and transparent public services.
+                </p>
+
+                <button>Read More</button>
+
+            </div>
+
+        </div>
+
+        <!-- NEWS -->
+
+        <div class="news-box">
+
+            <h3>What's New</h3>
+
+            <div class="news-card">
+
+                <p>Tender for Sample Trees - Chithar Division</p>
+
+                <small>May 2026</small>
+
+            </div>
+
+            <div class="news-card">
+
+                <p>New Rubber Price Update Released</p>
+
+                <small>May 2026</small>
+
+            </div>
+
+            <div class="news-card">
+
+                <p>Recruitment Notification 2026</p>
+
+                <small>May 2026</small>
+
+            </div>
+
+            <div class="news-card">
+
+                <p>Estate Maintenance Tender Notice</p>
+
+                <small>May 2026</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h4>ARASU RUBBER CORPORATION</h4>
+
+                <p>
+                    A Government of Tamil Nadu enterprise focused on
+                    sustainable rubber plantation and public service excellence.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <ul>
+
+                    <li>About Us</li>
+                    <li>Tenders</li>
+                    <li>Statistics</li>
+                    <li>Recruitment</li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h4>Contact</h4>
+
+                <p>
+                    Arasu Rubber Corporation Limited<br>
+                    Tamil Nadu, India<br>
+                    support@arasu-rubber.gov.in
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
