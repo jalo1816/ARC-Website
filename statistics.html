@@ -21,67 +21,53 @@
 
     body {
       background: #f4f7f5;
+      color: #222;
     }
 
     /* HEADER */
 
-    .top-header {
+    header {
       background: white;
       padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
 
     .logo-section {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 14px;
     }
 
-    .logo-section img {
-      width: 90px;
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
     }
 
-    .logo-text h1 {
+    .logo h1 {
       color: #0f6b35;
-      font-size: 38px;
+      font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 6px;
     }
 
-    .logo-text p {
-      color: #666;
-      font-size: 16px;
+    .logo p {
+      color: gray;
+      font-size: 14px;
     }
 
-    .contact-btn {
-      background: #8dc63f;
-      color: white;
-      padding: 14px 24px;
-      border-radius: 12px;
+    nav a {
       text-decoration: none;
-      font-weight: 600;
+      margin-left: 25px;
+      color: #333;
+      font-weight: 500;
+      transition: .3s;
     }
 
-    /* NAVBAR */
-
-    .navbar {
-      background: #8dc63f;
-      padding: 18px 60px;
-      display: flex;
-      gap: 30px;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .navbar a:hover {
+    nav a:hover {
       color: #0f6b35;
     }
 
@@ -252,15 +238,10 @@
 
     @media(max-width:1000px) {
 
-      .top-header {
+      header {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
         text-align: center;
-      }
-
-      .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
       }
 
       .hero h2 {
@@ -284,42 +265,37 @@
 
   <!-- HEADER -->
 
-  <div class="top-header">
+  <header>
 
     <div class="logo-section">
 
+      <img src="logo.jpg" class="logo-img">
 
-      <div class="logo-text">
+      <div class="logo">
 
         <h1>ARASU RUBBER CORPORATION</h1>
 
-        <p>AN ISO 9001-2015 CERTIFIED</p>
+        <p>Government of Tamil Nadu</p>
 
       </div>
 
     </div>
 
-    <a href="contact.html" class="contact-btn">
-      Contact Us
-    </a>
+    <nav>
 
-  </div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="organisation.html">Organisation</a>
+      <a href="labour.html">Labour</a>
+      <a href="we-sell.html">We sell</a>
+      <a href="tenders.html">Tenders</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
 
-  <!-- NAVBAR -->
+    </nav>
 
-  <div class="navbar">
-
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="organisation.html">Organisation</a>
-    <a href="statistics.html">Statistics</a>
-    <a href="labour.html">Labour</a>
-    <a href="we-sell.html">We sell</a>
-    <a href="tenders.html">Tenders</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-
-  </div>
+  </header>
 
   <!-- HERO -->
 

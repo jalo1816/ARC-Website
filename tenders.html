@@ -32,9 +32,23 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     }
 
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
     .logo h1 {
       color: #0f6b35;
       font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 6px;
     }
 
     .logo p {
@@ -227,9 +241,18 @@
 
   <header>
 
-    <div class="logo">
-      <h1>ARASU RUBBER CORPORATION</h1>
-      <p>Government of Tamil Nadu</p>
+    <div class="logo-section">
+
+      <img src="logo.jpg" class="logo-img">
+
+      <div class="logo">
+
+        <h1>ARASU RUBBER CORPORATION</h1>
+
+        <p>Government of Tamil Nadu</p>
+
+      </div>
+
     </div>
 
     <nav>

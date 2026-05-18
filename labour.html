@@ -22,11 +22,12 @@
 
         body {
             background: #f4f7f5;
+            color: #222;
         }
 
         /* HEADER */
 
-        .top-header {
+        header {
             background: white;
             padding: 20px 60px;
             display: flex;
@@ -38,51 +39,36 @@
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 14px;
         }
 
-        .logo-section img {
-            width: 90px;
+        .logo-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
         }
 
-        .logo-text h1 {
+        .logo h1 {
             color: #0f6b35;
-            font-size: 38px;
+            font-size: 28px;
+            line-height: 1.1;
+            margin-bottom: 6px;
         }
 
-        .logo-text p {
-            color: #666;
-            font-size: 16px;
+        .logo p {
+            color: gray;
+            font-size: 14px;
         }
 
-        .contact-btn {
-            background: #8dc63f;
-            color: white;
-            padding: 14px 24px;
-            border-radius: 12px;
+        nav a {
             text-decoration: none;
-            font-weight: 600;
+            margin-left: 25px;
+            color: #333;
+            font-weight: 500;
+            transition: .3s;
         }
 
-        /* NAVBAR */
-
-        .navbar {
-            background: #8dc63f;
-            padding: 18px 60px;
-            display: flex;
-            gap: 30px;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .navbar a:hover {
+        nav a:hover {
             color: #0f6b35;
         }
 
@@ -262,15 +248,10 @@
 
         @media(max-width:1000px) {
 
-            .top-header {
+            header {
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
                 text-align: center;
-            }
-
-            .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
             }
 
             .hero h2 {
@@ -290,43 +271,37 @@
 
     <!-- HEADER -->
 
-    <div class="top-header">
+    <header>
 
         <div class="logo-section">
 
-        
+            <img src="logo.jpg" class="logo-img">
 
-            <div class="logo-text">
+            <div class="logo">
 
                 <h1>ARASU RUBBER CORPORATION</h1>
 
-                <p>AN ISO 9001-2015 CERTIFIED</p>
+                <p>Government of Tamil Nadu</p>
 
             </div>
 
         </div>
 
-        <a href="contact.html" class="contact-btn">
-            Contact Us
-        </a>
+        <nav>
 
-    </div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="organisation.html">Organisation</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="labour.html">Labour</a>
+            <a href="we-sell.html">We sell</a>
+            <a href="tenders.html">Tenders</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
 
-    <!-- NAVBAR -->
+        </nav>
 
-    <div class="navbar">
-
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="organisation.html">Organisation</a>
-        <a href="statistics.html">Statistics</a>
-        <a href="labour.html">Labour</a>
-        <a href="we-sell.html">We sell</a>
-        <a href="tenders.html">Tenders</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-
-    </div>
+    </header>
 
     <!-- HERO -->
 
@@ -395,10 +370,6 @@
 
         </div>
 
-        
-
-        
-
         <div class="gallery-grid">
 
             <div class="gallery-card">
@@ -411,8 +382,7 @@
             </div>
 
             <div class="gallery-card">
-                <img
-                    src="immature.jpg">
+                <img src="immature.jpg">
                 <div class="gallery-content">
                     <h3>Immature Plants</h3>
                     <p>Monitoring and maintaining immature rubber plants for healthy growth.</p>
@@ -420,8 +390,7 @@
             </div>
 
             <div class="gallery-card">
-                <img
-                    src="young.jpg">
+                <img src="young.jpg">
                 <div class="gallery-content">
                     <h3>Young Plants</h3>
                     <p>Young plantation zones developed for future rubber production.</p>
@@ -429,8 +398,7 @@
             </div>
 
             <div class="gallery-card">
-                <img
-                    src="Centrifuging.jpg">
+                <img src="Centrifuging.jpg">
                 <div class="gallery-content">
                     <h3>Centrifuging</h3>
                     <p>Latex centrifuging and processing operations inside factory units.</p>
@@ -438,8 +406,7 @@
             </div>
 
             <div class="gallery-card">
-                <img
-                    src="Dripping of Latex.jpg">
+                <img src="Dripping of Latex.jpg">
                 <div class="gallery-content">
                     <h3>Dripping of Latex</h3>
                     <p>Natural latex collected from tapped rubber trees by workers.</p>
@@ -452,96 +419,6 @@
                 <div class="gallery-content">
                     <h3>Weighment of Latex</h3>
                     <p>Daily latex collection weighed and recorded for processing.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Schools for Employees.png">
-                <div class="gallery-content">
-                    <h3>Schools for Employees</h3>
-                    <p>Educational facilities provided for employees and their children.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1200&auto=format&fit=crop">
-                <div class="gallery-content">
-                    <h3>Treatment in ARC Hospital</h3>
-                    <p>Medical care and healthcare support for plantation workers.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Rubber Timber Transportation.jpg">
-                <div class="gallery-content">
-                    <h3>Rubber Timber Transportation</h3>
-                    <p>Timber transportation activities carried out across estate divisions.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Uprooting of Rubber Trees.jpg">
-                <div class="gallery-content">
-                    <h3>Uprooting of Rubber Trees</h3>
-                    <p>Old rubber trees removed and replaced with fresh plantations.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Garden Hospital.png">
-                <div class="gallery-content">
-                    <h3>Garden Hospital</h3>
-                    <p>Welfare medical facilities maintained inside plantation divisions.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Labour Colony.png">
-                <div class="gallery-content">
-                    <h3>Labour Colony</h3>
-                    <p>Residential colonies developed for estate labour families.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Tapping.jpg">
-                <div class="gallery-content">
-                    <h3>Tapping</h3>
-                    <p>Rubber tapping operations performed by skilled plantation workers.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Packed Material.jpg">
-                <div class="gallery-content">
-                    <h3>Packed Material</h3>
-                    <p>Rubber products packed and prepared for transportation and storage.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Young Matured Trees.jpg">
-                <div class="gallery-content">
-                    <h3>Young Matured Trees</h3>
-                    <p>Matured plantation zones ready for large-scale latex extraction.</p>
-                </div>
-            </div>
-
-            <div class="gallery-card">
-                <img
-                    src="Drying & Storage.jpg">
-                <div class="gallery-content">
-                    <h3>Drying & Storage</h3>
-                    <p>Rubber sheets dried and stored under controlled conditions.</p>
                 </div>
             </div>
 

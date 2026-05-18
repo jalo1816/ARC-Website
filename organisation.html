@@ -1,543 +1,521 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Organisation - Arasu Rubber Corporation</title>
+  <title>Organisation - Arasu Rubber Corporation</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+    body {
+      background: #f4f7f5;
+      color: #222;
+    }
 
-body{
-  background:#f4f7f5;
-}
+    /* HEADER */
 
-/* HEADER */
+    header {
+      background: white;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .08);
+    }
 
-.top-header{
-  background:white;
-  padding:20px 60px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.logo-section{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
 
-.logo-section img{
-  width:70px;
-}
+    .logo h1 {
+      color: #0f6b35;
+      font-size: 28px;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
 
-.logo-text h1{
-  color:#0f6b35;
-  font-size:38px;
-}
+    .logo p {
+      color: gray;
+      font-size: 14px;
+    }
 
-.logo-text p{
-  color:#666;
-  font-size:16px;
-}
+    nav a {
+      text-decoration: none;
+      margin-left: 25px;
+      color: #333;
+      font-weight: 500;
+      transition: .3s;
+    }
 
-.contact-btn{
-  background:#8dc63f;
-  color:white;
-  padding:14px 24px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-}
+    nav a:hover {
+      color: #0f6b35;
+    }
 
-/* NAVBAR */
+    /* HERO */
 
-.navbar{
-  background:#8dc63f;
-  padding:18px 60px;
-  display:flex;
-  gap:30px;
-  position:sticky;
-  top:0;
-  z-index:999;
-}
+    .hero {
+      height: 45vh;
 
-.navbar a{
-  color:white;
-  text-decoration:none;
-  font-weight:600;
-  transition:.3s;
-}
+      background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
 
-.navbar a:hover{
-  color:#0f6b35;
-}
+      background-size: cover;
+      background-position: center;
 
-/* HERO */
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-.hero{
-  height:45vh;
+      text-align: center;
+      color: white;
+    }
 
-  background:
-  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop');
+    .hero h2 {
+      font-size: 65px;
+      margin-bottom: 15px;
+    }
 
-  background-size:cover;
-  background-position:center;
+    .hero p {
+      font-size: 20px;
+      color: #e5e5e5;
+    }
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    /* ORGANISATION */
 
-  text-align:center;
-  color:white;
-}
+    .organisation-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      padding: 80px 60px;
+    }
 
-.hero h2{
-  font-size:65px;
-  margin-bottom:15px;
-}
+    .org-content {
+      background: white;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+    }
 
-.hero p{
-  font-size:20px;
-  color:#e5e5e5;
-}
+    .org-content h2 {
+      color: #0f6b35;
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
 
-/* ORGANISATION */
+    .org-content h3 {
+      color: #f39c12;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
 
-.organisation-layout{
-  display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:40px;
-  padding:80px 60px;
-}
+    .org-content p,
+    .org-content li {
+      color: #444;
+      line-height: 2;
+      font-size: 16px;
+    }
 
-.org-content{
-  background:white;
-  padding:40px;
-  border-radius:25px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
+    .org-content ol {
+      padding-left: 25px;
+    }
 
-.org-content h2{
-  color:#0f6b35;
-  font-size:48px;
-  margin-bottom:30px;
-}
+    .org-flowchart {
+      background: white;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+      text-align: center;
+    }
 
-.org-content h3{
-  color:#f39c12;
-  margin-top:30px;
-  margin-bottom:20px;
-  font-size:28px;
-}
+    .flowchart-title {
+      font-size: 32px;
+      color: #0f6b35;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
 
-.org-content p,
-.org-content li{
-  color:#444;
-  line-height:2;
-  font-size:16px;
-}
+    .flow-box {
+      background: linear-gradient(135deg, #0f6b35, #19884b);
+      color: white;
+      padding: 18px;
+      border-radius: 15px;
+      font-weight: 600;
+      margin: auto;
+      width: 80%;
+      margin-top: 15px;
+    }
 
-.org-content ol{
-  padding-left:25px;
-}
+    .big-box {
+      width: 90%;
+    }
 
-.org-flowchart{
-  background:white;
-  padding:40px;
-  border-radius:25px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-  text-align:center;
-}
+    .line {
+      width: 4px;
+      height: 35px;
+      background: #0f6b35;
+      margin: 0 auto;
+    }
 
-.flowchart-title{
-  font-size:32px;
-  color:#0f6b35;
-  font-weight:700;
-  margin-bottom:35px;
-}
+    .branch-grid {
+      margin-top: 40px;
+      display: grid;
+      gap: 25px;
+    }
 
-.flow-box{
-  background:linear-gradient(135deg,#0f6b35,#19884b);
-  color:white;
-  padding:18px;
-  border-radius:15px;
-  font-weight:600;
-  margin:auto;
-  width:80%;
-  margin-top:15px;
-}
+    .branch-card {
+      background: #f7fbf8;
+      border: 2px solid #dfeee3;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: left;
+    }
 
-.big-box{
-  width:90%;
-}
+    .branch-card h4 {
+      color: #0f6b35;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
 
-.line{
-  width:4px;
-  height:35px;
-  background:#0f6b35;
-  margin:0 auto;
-}
+    .branch-card ul {
+      padding-left: 20px;
+    }
 
-.branch-grid{
-  margin-top:40px;
-  display:grid;
-  gap:25px;
-}
+    .branch-card li {
+      line-height: 1.8;
+      color: #555;
+    }
 
-.branch-card{
-  background:#f7fbf8;
-  border:2px solid #dfeee3;
-  border-radius:20px;
-  padding:25px;
-  text-align:left;
-}
+    /* FOOTER */
 
-.branch-card h4{
-  color:#0f6b35;
-  margin-bottom:15px;
-  font-size:22px;
-}
+    footer {
+      background: #0a3f20;
+      color: white;
+      padding: 50px 60px;
+      margin-top: 40px;
+    }
 
-.branch-card ul{
-  padding-left:20px;
-}
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
 
-.branch-card li{
-  line-height:1.8;
-  color:#555;
-}
+    footer h4 {
+      font-size: 24px;
+    }
 
-/* FOOTER */
+    footer p,
+    footer li {
+      margin-top: 15px;
+      color: #d6e8d8;
+      line-height: 1.8;
+      list-style: none;
+    }
 
-footer{
-  background:#0a3f20;
-  color:white;
-  padding:50px 60px;
-  margin-top:40px;
-}
+    .bottom-bar {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+      text-align: center;
+      color: #cfe3d3;
+    }
 
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:40px;
-}
+    /* RESPONSIVE */
 
-footer h4{
-  font-size:24px;
-}
+    @media(max-width:1000px) {
 
-footer p,
-footer li{
-  margin-top:15px;
-  color:#d6e8d8;
-  line-height:1.8;
-  list-style:none;
-}
+      .organisation-layout {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+      }
 
-.bottom-bar{
-  margin-top:40px;
-  padding-top:20px;
-  border-top:1px solid rgba(255,255,255,.2);
-  text-align:center;
-  color:#cfe3d3;
-}
+      header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
 
-/* RESPONSIVE */
+      .hero h2 {
+        font-size: 42px;
+      }
 
-@media(max-width:1000px){
-
-  .organisation-layout{
-    grid-template-columns:1fr;
-    padding:40px 20px;
-  }
-
-  .top-header{
-    flex-direction:column;
-    gap:20px;
-    text-align:center;
-  }
-
-  .navbar{
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero h2{
-    font-size:42px;
-  }
-
-}
-
-</style>
+    }
+  </style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+  <!-- HEADER -->
 
-<div class="top-header">
+  <header>
 
-  <div class="logo-section">
+    <div class="logo-section">
 
-    
+      <img src="logo.jpg" class="logo-img">
 
-    <div class="logo-text">
-      <h1>ARASU RUBBER CORPORATION</h1>
-      <p>AN ISO 9001-2015 CERTIFIED</p>
-    </div>
+      <div class="logo">
 
-  </div>
+        <h1>ARASU RUBBER CORPORATION</h1>
 
-  <a href="contact.html" class="contact-btn">
-    Contact Us
-  </a>
-
-</div>
-
-<!-- NAVBAR -->
-
-<div class="navbar">
-
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="organisation.html">Organisation</a>
-  <a href="statistics.html">Statistics</a>
-  <a href="labour.html">Labour</a>
-  <a href="we-sell.html">We sell</a>
-  <a href="tenders.html">Tenders</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div>
-
-    <h2>Organisation Structure</h2>
-
-    <p>
-      Administrative Framework of Arasu Rubber Corporation
-    </p>
-
-  </div>
-
-</section>
-
-<!-- ORGANISATION CONTENT -->
-
-<section class="organisation-layout">
-
-  <div class="org-content">
-
-    <h2>Organisation</h2>
-
-    <h3>BOARD OF DIRECTORS</h3>
-
-    <p>
-      Board of Directors is headed by the Chairperson and Managing Director, Arasu Rubber Corporation Limited, Chennai.
-    </p>
-
-    <ol>
-
-      <li>
-        Chairperson & Managing Director, Arasu Rubber Corporation Limited, Panagal Building, Saidapet, Chennai - 600015.
-      </li>
-
-      <li>
-        Principal Secretary to Government, Environment, Climate Change and Forests Department, Chennai - 600009.
-      </li>
-
-      <li>
-        Addl. Principal Chief Conservator of Forests, Forest Conservation Act, Panagal Maaligai, Chennai - 600015.
-      </li>
-
-      <li>
-        Chairperson & Managing Director, Arasu Rubber Corporation Limited, Nagercoil.
-      </li>
-
-      <li>
-        Addl./Joint/Deputy Secretary to Government, Finance Department, Secretariat, Chennai - 600009.
-      </li>
-
-      <li>
-        The District Collector, Kanniyakumari District, Nagercoil - 629001.
-      </li>
-
-      <li>
-        General Manager, Arasu Rubber Corporation Limited, Nagercoil.
-      </li>
-
-      <li>
-        Director/Commissioner of Horticulture and Plantation Crops, Chennai.
-      </li>
-
-      <li>
-        Director/Commissioner, Commissionerate of Rehabilitation and Welfare of Non-Resident Tamils, Chennai.
-      </li>
-
-      <li>
-        Director, Research (RRII), Rubber Board, Kottayam, Kerala.
-      </li>
-
-    </ol>
-
-    <h3>CHAIRPERSON & MANAGING DIRECTOR</h3>
-
-    <p>
-      Thiru. N. Satheesh, I.F.S., is the Chairperson & Managing Director of the Corporation.
-    </p>
-
-    <h3>GENERAL MANAGER</h3>
-
-    <p>
-      Dr. Dileep Kumar H, I.F.S., is the General Manager of the Corporation.
-    </p>
-
-    <p>
-      The Management is supported by Unit Officers in Registered Office like Senior Systems Manager, Chief Accounts Officer, Industrial Relations Officer, Company Secretary, Administrative Officer, and Senior Draughting Officer.
-    </p>
-
-  </div>
-
-  <div class="org-flowchart">
-
-    <div class="flowchart-title">
-      Organizational Flowchart
-    </div>
-
-    <div class="flow-box">Government of Tamil Nadu</div>
-
-    <div class="line"></div>
-
-    <div class="flow-box">Board of Directors</div>
-
-    <div class="line"></div>
-
-    <div class="flow-box">Chairman</div>
-
-    <div class="line"></div>
-
-    <div class="flow-box">Managing Director</div>
-
-    <div class="line"></div>
-
-    <div class="flow-box big-box">
-      Joint Managing Director / General Manager
-    </div>
-
-    <div class="branch-grid">
-
-      <div class="branch-card">
-
-        <h4>Five Divisions</h4>
-
-        <ul>
-          <li>Divisional Managers</li>
-          <li>Rangers</li>
-          <li>Field Officers</li>
-          <li>Foresters / FAs</li>
-          <li>Ministerial Staff</li>
-          <li>Teaching & Medical Staff</li>
-          <li>Workers</li>
-        </ul>
+        <p>Government of Tamil Nadu</p>
 
       </div>
 
-      <div class="branch-card">
-
-        <h4>Registered Office</h4>
-
-        <ul>
-          <li>Chief Accounts Officer</li>
-          <li>Sr. Systems Manager</li>
-          <li>Industrial Relations Officer</li>
-          <li>Administrative Officer</li>
-          <li>Law Officer</li>
-          <li>Superintendents</li>
-          <li>Ministerial Staff</li>
-        </ul>
-
-      </div>
-
-      <div class="branch-card">
-
-        <h4>Factories</h4>
-
-        <ul>
-          <li>Factory Officers</li>
-          <li>Technical Staff</li>
-          <li>Ministerial Staff</li>
-          <li>Workers</li>
-        </ul>
-
-      </div>
-
     </div>
 
-  </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="statistics.html">Statistics</a>
+      <a href="organisation.html">Organisation</a>
+      <a href="labour.html">Labour</a>
+      <a href="we-sell.html">We sell</a>
+      <a href="tenders.html">Tenders</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-</section>
+  </header>
 
-<!-- FOOTER -->
+  <!-- HERO -->
 
-<footer>
-
-  <div class="footer-grid">
+  <section class="hero">
 
     <div>
-      <h4>ARASU RUBBER CORPORATION</h4>
+
+      <h2>Organisation Structure</h2>
 
       <p>
-        Government enterprise focused on sustainable rubber plantation development and public service excellence.
+        Administrative Framework of Arasu Rubber Corporation
       </p>
+
     </div>
 
-    <div>
-      <h4>Quick Links</h4>
+  </section>
 
-      <ul>
-        <li>Organisation</li>
-        <li>Statistics</li>
-        <li>Tenders</li>
-        <li>Gallery</li>
-      </ul>
-    </div>
+  <!-- ORGANISATION CONTENT -->
 
-    <div>
-      <h4>Contact</h4>
+  <section class="organisation-layout">
+
+    <div class="org-content">
+
+      <h2>Organisation</h2>
+
+      <h3>BOARD OF DIRECTORS</h3>
 
       <p>
-        Arasu Rubber Corporation Limited<br>
-        Tamil Nadu, India
+        Board of Directors is headed by the Chairperson and Managing Director, Arasu Rubber Corporation Limited,
+        Chennai.
       </p>
+
+      <ol>
+
+        <li>
+          Chairperson & Managing Director, Arasu Rubber Corporation Limited, Panagal Building, Saidapet, Chennai -
+          600015.
+        </li>
+
+        <li>
+          Principal Secretary to Government, Environment, Climate Change and Forests Department, Chennai - 600009.
+        </li>
+
+        <li>
+          Addl. Principal Chief Conservator of Forests, Forest Conservation Act, Panagal Maaligai, Chennai - 600015.
+        </li>
+
+        <li>
+          Chairperson & Managing Director, Arasu Rubber Corporation Limited, Nagercoil.
+        </li>
+
+        <li>
+          Addl./Joint/Deputy Secretary to Government, Finance Department, Secretariat, Chennai - 600009.
+        </li>
+
+        <li>
+          The District Collector, Kanniyakumari District, Nagercoil - 629001.
+        </li>
+
+        <li>
+          General Manager, Arasu Rubber Corporation Limited, Nagercoil.
+        </li>
+
+        <li>
+          Director/Commissioner of Horticulture and Plantation Crops, Chennai.
+        </li>
+
+        <li>
+          Director/Commissioner, Commissionerate of Rehabilitation and Welfare of Non-Resident Tamils, Chennai.
+        </li>
+
+        <li>
+          Director, Research (RRII), Rubber Board, Kottayam, Kerala.
+        </li>
+
+      </ol>
+
+      <h3>CHAIRPERSON & MANAGING DIRECTOR</h3>
+
+      <p>
+        Thiru. N. Satheesh, I.F.S., is the Chairperson & Managing Director of the Corporation.
+      </p>
+
+      <h3>GENERAL MANAGER</h3>
+
+      <p>
+        Dr. Dileep Kumar H, I.F.S., is the General Manager of the Corporation.
+      </p>
+
+      <p>
+        The Management is supported by Unit Officers in Registered Office like Senior Systems Manager, Chief Accounts
+        Officer, Industrial Relations Officer, Company Secretary, Administrative Officer, and Senior Draughting Officer.
+      </p>
+
     </div>
 
-  </div>
+    <div class="org-flowchart">
 
-  <div class="bottom-bar">
-    Copyright © 2026 Arasu Rubber Corporation Limited
-  </div>
+      <div class="flowchart-title">
+        Organizational Flowchart
+      </div>
 
-</footer>
+      <div class="flow-box">Government of Tamil Nadu</div>
+
+      <div class="line"></div>
+
+      <div class="flow-box">Board of Directors</div>
+
+      <div class="line"></div>
+
+      <div class="flow-box">Chairman</div>
+
+      <div class="line"></div>
+
+      <div class="flow-box">Managing Director</div>
+
+      <div class="line"></div>
+
+      <div class="flow-box big-box">
+        Joint Managing Director / General Manager
+      </div>
+
+      <div class="branch-grid">
+
+        <div class="branch-card">
+
+          <h4>Five Divisions</h4>
+
+          <ul>
+            <li>Divisional Managers</li>
+            <li>Rangers</li>
+            <li>Field Officers</li>
+            <li>Foresters / FAs</li>
+            <li>Ministerial Staff</li>
+            <li>Teaching & Medical Staff</li>
+            <li>Workers</li>
+          </ul>
+
+        </div>
+
+        <div class="branch-card">
+
+          <h4>Registered Office</h4>
+
+          <ul>
+            <li>Chief Accounts Officer</li>
+            <li>Sr. Systems Manager</li>
+            <li>Industrial Relations Officer</li>
+            <li>Administrative Officer</li>
+            <li>Law Officer</li>
+            <li>Superintendents</li>
+            <li>Ministerial Staff</li>
+          </ul>
+
+        </div>
+
+        <div class="branch-card">
+
+          <h4>Factories</h4>
+
+          <ul>
+            <li>Factory Officers</li>
+            <li>Technical Staff</li>
+            <li>Ministerial Staff</li>
+            <li>Workers</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>ARASU RUBBER CORPORATION</h4>
+
+        <p>
+          Government enterprise focused on sustainable rubber plantation development and public service excellence.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+
+        <ul>
+          <li>Organisation</li>
+          <li>Statistics</li>
+          <li>Tenders</li>
+          <li>Gallery</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+
+        <p>
+          Arasu Rubber Corporation Limited<br>
+          Tamil Nadu, India
+        </p>
+      </div>
+
+    </div>
+
+    <div class="bottom-bar">
+      Copyright © 2026 Arasu Rubber Corporation Limited
+    </div>
+
+  </footer>
 
 </body>
+
 </html>
