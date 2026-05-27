@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RTI - Arasu Rubber Corporation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+            background:#f5f7f6;
+            color:#222;
+        }
+
+        /* HEADER */
+
+        header{
+            background:white;
+            padding:12px 55px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .logo-section{
+            display:flex;
+            align-items:center;
+            gap:14px;
+        }
+
+        .logo-img{
+            width:110px;
+            height:110px;
+            object-fit:contain;
+        }
+
+        .logo h1{
+            color:#0f6b35;
+            font-size:28px;
+            line-height:1.2;
+        }
+
+        .logo p{
+            color:#777;
+            font-size:14px;
+        }
+
+        nav{
+            display:flex;
+            gap:25px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#333;
+            font-size:17px;
+            font-weight:500;
+            transition:.3s;
+        }
+
+        nav a:hover{
+            color:#0f6b35;
+        }
+
+        /* HERO */
+
+        .hero{
+            height:50vh;
+
+            background:
+            linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+            url('rti.jpg');
+
+            background-size:cover;
+            background-position:center;
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            text-align:center;
+            color:white;
+
+            padding:20px;
+        }
+
+        .hero-content h1{
+            font-size:60px;
+            margin-bottom:15px;
+        }
+
+        .hero-content p{
+            font-size:20px;
+            max-width:800px;
+            line-height:1.8;
+        }
+
+        /* RTI SECTION */
+
+        .rti-section{
+            padding:80px 60px;
+        }
+
+        .rti-title{
+            text-align:center;
+            margin-bottom:50px;
+        }
+
+        .rti-title h2{
+            color:#0f6b35;
+            font-size:45px;
+            margin-bottom:15px;
+        }
+
+        .rti-title p{
+            color:#666;
+            font-size:18px;
+        }
+
+        /* ACCORDION */
+
+        .accordion{
+            background:white;
+            border-radius:22px;
+            margin-bottom:25px;
+            overflow:hidden;
+            box-shadow:0 5px 18px rgba(0,0,0,.08);
+        }
+
+        .accordion-btn{
+            width:100%;
+            border:none;
+            background:white;
+
+            padding:24px 30px;
+
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+
+            font-size:24px;
+            font-weight:600;
+            color:#0f6b35;
+
+            cursor:pointer;
+        }
+
+        .accordion-btn span{
+            font-size:30px;
+        }
+
+        .accordion-content{
+            max-height:0;
+            overflow:hidden;
+            transition:0.4s ease;
+            padding:0 30px;
+        }
+
+        .accordion-content p,
+        .accordion-content li{
+            color:#444;
+            line-height:1.9;
+            margin-bottom:15px;
+        }
+
+        .accordion-content ul{
+            padding-left:20px;
+            padding-bottom:20px;
+        }
+
+        .accordion.active .accordion-content{
+            max-height:1000px;
+            padding-top:10px;
+            padding-bottom:30px;
+        }
+
+        /* TABLE */
+
+        .rti-table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:15px;
+        }
+
+        .rti-table th{
+            background:#0f6b35;
+            color:white;
+            padding:15px;
+            text-align:left;
+        }
+
+        .rti-table td{
+            padding:15px;
+            border-bottom:1px solid #eee;
+            color:#444;
+            line-height:1.7;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#0a3f20;
+            color:white;
+            padding:60px;
+            margin-top:50px;
+        }
+
+        .footer-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:40px;
+        }
+
+        footer h3{
+            margin-bottom:18px;
+        }
+
+        footer p{
+            color:#d7eadb;
+            line-height:1.9;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:900px){
+
+            header{
+                flex-direction:column;
+                gap:15px;
+                padding:20px;
+            }
+
+            nav{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero-content h1{
+                font-size:40px;
+            }
+
+            .hero-content p{
+                font-size:16px;
+            }
+
+            .rti-section{
+                padding:60px 20px;
+            }
+
+            .accordion-btn{
+                font-size:20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo-section">
+
+            <img src="logo.jpg" class="logo-img">
+
+            <div class="logo">
+
+                <h1>ARASU RUBBER CORPORATION</h1>
+
+                <p>Government of Tamil Nadu</p>
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="organisation.html">Organisation</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="labour.html">Labour</a>
+            <a href="we-sell.html">We Sell</a>
+            <a href="tenders.html">Tenders</a>
+            <a href="rti.html">RTI</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Right To Information</h1>
+
+            <p>
+                Access official public information,
+                organisational details, functions,
+                duties and RTI services of
+                Arasu Rubber Corporation Limited.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- RTI SECTION -->
+
+    <section class="rti-section">
+
+        <div class="rti-title">
+
+            <h2>Public Information Portal</h2>
+
+            <p>
+                Click the sections below to view detailed RTI information.
+            </p>
+
+        </div>
+
+        <!-- ORGANISATION -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Organisation Details
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <table class="rti-table">
+
+                    <tr>
+                        <th>Name of Organisation</th>
+                        <td>Arasu Rubber Corporation Limited</td>
+                    </tr>
+
+                    <tr>
+                        <th>Registered Office</th>
+                        <td>
+                            Vadasery, Nagercoil - 629001,
+                            Kanniyakumari District,
+                            Tamil Nadu
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Date of Formation</th>
+                        <td>01-10-1984</td>
+                    </tr>
+
+                    <tr>
+                        <th>Present Operational Area</th>
+                        <td>4187.68 hectares</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- OBJECTIVES -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Objectives
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <ul>
+
+                    <li>
+                        To establish and manage rubber plantations.
+                    </li>
+
+                    <li>
+                        To protect plantation workers and increase employment opportunities.
+                    </li>
+
+                    <li>
+                        To produce and market natural rubber products.
+                    </li>
+
+                    <li>
+                        To provide plantation welfare and public services.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- FUNCTIONS -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Functions & Duties
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <ul>
+
+                    <li>Sale of Rubber Trees</li>
+
+                    <li>Regeneration of Plantations</li>
+
+                    <li>Protection & Conservation</li>
+
+                    <li>Seed Collection</li>
+
+                    <li>Nursery Development</li>
+
+                    <li>Employment Generation</li>
+
+                    <li>Factory Processing</li>
+
+                    <li>Sales & Marketing</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Products & Uses
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <table class="rti-table">
+
+                    <tr>
+                        <th>Product</th>
+                        <th>Uses</th>
+                    </tr>
+
+                    <tr>
+                        <td>Cenex</td>
+                        <td>Surgical gloves, balloons, mattresses</td>
+                    </tr>
+
+                    <tr>
+                        <td>RSS</td>
+                        <td>Tyres, tubes and industrial products</td>
+                    </tr>
+
+                    <tr>
+                        <td>EBC</td>
+                        <td>Cycle tubes and tyre retreading</td>
+                    </tr>
+
+                    <tr>
+                        <td>Skim Crepe</td>
+                        <td>Low quality footwear manufacturing</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- LABOUR -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Labour Welfare Benefits
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <ul>
+
+                    <li>Earned leave and sick leave facilities</li>
+
+                    <li>Maternity leave for workers</li>
+
+                    <li>Medical assistance and welfare support</li>
+
+                    <li>Protective materials for factory workers</li>
+
+                    <li>Refreshment facilities for night shift workers</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- OFFICERS -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Public Information Officers
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <table class="rti-table">
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Designation</th>
+                    </tr>
+
+                    <tr>
+                        <td>General Manager</td>
+                        <td>Appellate Authority</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thiru M. Vinod Kumar</td>
+                        <td>Public Information Officer</td>
+                    </tr>
+
+                    <tr>
+                        <td>Thiru K. Sutha</td>
+                        <td>Assistant Public Information Officer</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- BOARD -->
+
+        <div class="accordion">
+
+            <button class="accordion-btn">
+
+                Board Of Directors
+
+                <span>+</span>
+
+            </button>
+
+            <div class="accordion-content">
+
+                <ul>
+
+                    <li>Chairman, Arasu Rubber Corporation Limited</li>
+
+                    <li>
+                        Principal Secretary,
+                        Environment & Forest Department
+                    </li>
+
+                    <li>
+                        Managing Director,
+                        Arasu Rubber Corporation Limited
+                    </li>
+
+                    <li>
+                        Collector,
+                        Kanniyakumari District
+                    </li>
+
+                    <li>
+                        Director of Horticulture & Plantation Crops
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>Arasu Rubber Corporation</h3>
+
+                <p>
+                    Government of Tamil Nadu enterprise
+                    focused on plantation development
+                    and public welfare services.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>RTI Contact</h3>
+
+                <p>
+
+                    Registered Office,
+                    Vadasery,
+                    Nagercoil - 629001,
+                    Tamil Nadu
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Office Hours</h3>
+
+                <p>
+
+                    Monday - Friday<br>
+
+                    9:45 AM to 5:45 PM
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        const accordions = document.querySelectorAll(".accordion");
+
+        accordions.forEach((accordion) => {
+
+            const btn = accordion.querySelector(".accordion-btn");
+
+            btn.addEventListener("click", () => {
+
+                accordion.classList.toggle("active");
+
+                const icon = btn.querySelector("span");
+
+                if(accordion.classList.contains("active")){
+
+                    icon.innerHTML = "-";
+
+                }
+                else{
+
+                    icon.innerHTML = "+";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
